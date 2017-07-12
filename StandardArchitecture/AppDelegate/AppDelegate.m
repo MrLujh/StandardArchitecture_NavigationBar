@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "TabBarViewController.h"
+
 
 @interface AppDelegate ()
-
+// tabBarViewController
+@property (nonatomic, strong) TabBarViewController *tabBarViewController;
 @end
 
 @implementation AppDelegate
@@ -20,13 +21,24 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[TabBarViewController alloc] init];
+    self.tabBarViewController = [[TabBarViewController alloc] init];
+    self.window.rootViewController = self.tabBarViewController;
     [self.window makeKeyAndVisible];
+    
+    // 显示小红点
+    [self showUnreadMessageHotView];
     
     return YES;
 }
 
+#pragma mark -显示小红点
 
+- (void)showUnreadMessageHotView {
+    
+    //显示小红点
+    [self.tabBarViewController.tabBar showBadgeOnItemIndex:4];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

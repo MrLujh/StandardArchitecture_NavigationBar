@@ -59,7 +59,7 @@
 - (void)setUpChildVC {
     
     HomeViewController *homeVC = [[HomeViewController alloc] init];
-    
+    homeVC.tabBarItem.badgeValue = @"1111";
     [self setChildVC:homeVC title:@"" image:@"tabBar_0" selectedImage:@"tabBar_0_selected"];
     
     RecommendViewController *recommendVC = [[RecommendViewController alloc] init];

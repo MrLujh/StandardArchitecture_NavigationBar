@@ -12,6 +12,8 @@
 		2E11CAF71F15F4040085CFE4 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAF61F15F4040085CFE4 /* MoreViewController.m */; };
 		2E11CAFA1F15FAC00085CFE4 /* ClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAF91F15FAC00085CFE4 /* ClassificationViewController.m */; };
 		2E11CAFD1F16012D0085CFE4 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAFC1F16012D0085CFE4 /* GroupViewController.m */; };
+		2E11CB001F1614E40085CFE4 /* UITabBar+TBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAFF1F1614E40085CFE4 /* UITabBar+TBBadge.m */; };
+		2E11CB031F1615720085CFE4 /* RedDotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CB021F1615720085CFE4 /* RedDotViewController.m */; };
 		2E6CC1431F15B3560027AB17 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CC1421F15B3560027AB17 /* RecommendViewController.m */; };
 		2E8D85121F14B2EF00CC2C1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D85111F14B2EF00CC2C1F /* main.m */; };
 		2E8D851B1F14B2EF00CC2C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D85191F14B2EF00CC2C1F /* Main.storyboard */; };
@@ -60,6 +62,10 @@
 		2E11CAF91F15FAC00085CFE4 /* ClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationViewController.m; sourceTree = "<group>"; };
 		2E11CAFB1F16012D0085CFE4 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		2E11CAFC1F16012D0085CFE4 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		2E11CAFE1F1614E40085CFE4 /* UITabBar+TBBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+TBBadge.h"; sourceTree = "<group>"; };
+		2E11CAFF1F1614E40085CFE4 /* UITabBar+TBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TBBadge.m"; sourceTree = "<group>"; };
+		2E11CB011F1615720085CFE4 /* RedDotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedDotViewController.h; sourceTree = "<group>"; };
+		2E11CB021F1615720085CFE4 /* RedDotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedDotViewController.m; sourceTree = "<group>"; };
 		2E6CC1411F15B3560027AB17 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		2E6CC1421F15B3560027AB17 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		2E6CC1441F15B6300027AB17 /* AppStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 			children = (
 				2E11CAF51F15F4040085CFE4 /* MoreViewController.h */,
 				2E11CAF61F15F4040085CFE4 /* MoreViewController.m */,
+				2E11CB011F1615720085CFE4 /* RedDotViewController.h */,
+				2E11CB021F1615720085CFE4 /* RedDotViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -331,6 +339,8 @@
 		2E8D85701F14B55800CC2C1F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2E11CAFE1F1614E40085CFE4 /* UITabBar+TBBadge.h */,
+				2E11CAFF1F1614E40085CFE4 /* UITabBar+TBBadge.m */,
 				2E8D85891F14B8B600CC2C1F /* UIView+Frame.h */,
 				2E8D858A1F14B8B600CC2C1F /* UIView+Frame.m */,
 				2E8D85711F14B55800CC2C1F /* UIImage+Extension.h */,
@@ -562,8 +572,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E11CAFD1F16012D0085CFE4 /* GroupViewController.m in Sources */,
+				2E11CB001F1614E40085CFE4 /* UITabBar+TBBadge.m in Sources */,
 				2E8D855B1F14B4B300CC2C1F /* TabBarViewController.m in Sources */,
 				2E6CC1431F15B3560027AB17 /* RecommendViewController.m in Sources */,
+				2E11CB031F1615720085CFE4 /* RedDotViewController.m in Sources */,
 				2EFAA9721F14CD5A00DCACC7 /* PushViewController.m in Sources */,
 				2E8D858B1F14B8B600CC2C1F /* UIView+Frame.m in Sources */,
 				2E11CAF11F15BFDA0085CFE4 /* FriendViewController.m in Sources */,
