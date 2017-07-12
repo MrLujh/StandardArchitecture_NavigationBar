@@ -14,6 +14,7 @@
 #import "ClassificationViewController.h"
 #import "MoreViewController.h"
 #import "TabBar.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface TabBarViewController ()
 
@@ -84,14 +85,40 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-    NSLog(@"item name = %@", item.title);
+    
     NSInteger index = [self.tabBar.items indexOfObject:item];
+    
     [self animationWithIndex:index];
-    if([item.title isEqualToString:@"发现"])
+    
+    if([item.title isEqualToString:@"首页"])
     {
-        // 也可以判断标题,然后做自己想做的事<img alt="得意" src="http://static.blog.csdn.net/xheditor/xheditor_emot/default/proud.gif" />
+        
     }
+    
+    [self playSoundEffect:@"11.mp3"];
 }
+
+
+/**
+ * 播放音效文件
+ *
+ * @param name 音频文件名称 */
+-(void)playSoundEffect:(NSString *)name{
+    
+    NSString *audioFile=[[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSURL *fileUrl=[NSURL fileURLWithPath:audioFile];
+    //1.获得系统声音ID
+    SystemSoundID soundID=0;
+    /**
+     * inFileUrl: 音频文件url
+     * outSystemSoundID:声 id(此函数会将音效文件加入到系统音频服务中并返回一个长整形ID) */
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
+    //如果需要在播放完之后执行某些操作,可以调用如下方法注册一个播放完成回调函数 AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
+    //2.播放音频
+   // AudioServicesPlaySystemSound(soundID);//播放音效
+    AudioServicesPlayAlertSound(soundID);//播放音效并震动
+}
+
 - (void)animationWithIndex:(NSInteger) index {
     NSMutableArray * tabbarbuttonArray = [NSMutableArray array];
     for (UIView *tabBarButton in self.tabBar.subviews) {

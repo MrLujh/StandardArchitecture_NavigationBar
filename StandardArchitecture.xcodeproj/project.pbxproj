@@ -14,6 +14,7 @@
 		2E11CAFD1F16012D0085CFE4 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAFC1F16012D0085CFE4 /* GroupViewController.m */; };
 		2E11CB001F1614E40085CFE4 /* UITabBar+TBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CAFF1F1614E40085CFE4 /* UITabBar+TBBadge.m */; };
 		2E11CB031F1615720085CFE4 /* RedDotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E11CB021F1615720085CFE4 /* RedDotViewController.m */; };
+		2E11CB051F16202D0085CFE4 /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E11CB041F16202D0085CFE4 /* 11.mp3 */; };
 		2E6CC1431F15B3560027AB17 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CC1421F15B3560027AB17 /* RecommendViewController.m */; };
 		2E8D85121F14B2EF00CC2C1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D85111F14B2EF00CC2C1F /* main.m */; };
 		2E8D851B1F14B2EF00CC2C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D85191F14B2EF00CC2C1F /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		2E11CAFF1F1614E40085CFE4 /* UITabBar+TBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TBBadge.m"; sourceTree = "<group>"; };
 		2E11CB011F1615720085CFE4 /* RedDotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedDotViewController.h; sourceTree = "<group>"; };
 		2E11CB021F1615720085CFE4 /* RedDotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedDotViewController.m; sourceTree = "<group>"; };
+		2E11CB041F16202D0085CFE4 /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11.mp3; sourceTree = "<group>"; };
 		2E6CC1411F15B3560027AB17 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		2E6CC1421F15B3560027AB17 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		2E6CC1441F15B6300027AB17 /* AppStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		2E8D85551F14B45400CC2C1F /* ViewContrller */ = {
 			isa = PBXGroup;
 			children = (
+				2E11CB041F16202D0085CFE4 /* 11.mp3 */,
 				2E8D85561F14B4B300CC2C1F /* NavigationViewController.h */,
 				2E8D85571F14B4B300CC2C1F /* NavigationViewController.m */,
 				2E8D85581F14B4B300CC2C1F /* TabBarViewController.h */,
@@ -498,6 +501,7 @@
 			files = (
 				2E8D85201F14B2EF00CC2C1F /* LaunchScreen.storyboard in Resources */,
 				2E8D851D1F14B2EF00CC2C1F /* Assets.xcassets in Resources */,
+				2E11CB051F16202D0085CFE4 /* 11.mp3 in Resources */,
 				2E8D851B1F14B2EF00CC2C1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
