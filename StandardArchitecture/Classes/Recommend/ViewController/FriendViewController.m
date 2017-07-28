@@ -30,14 +30,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    if (self.navigationController.childViewControllers.count > 1) {
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
-        
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     

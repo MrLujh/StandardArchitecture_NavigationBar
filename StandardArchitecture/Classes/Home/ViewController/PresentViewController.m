@@ -17,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self setNavigationBarTitle:@"present"];
+    
 }
 
 #pragma mark -初始化导航栏
@@ -28,11 +30,11 @@
     
     // 返回按钮
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, 25, 25);
+    backBtn.frame = CGRectMake(12, 30, 25, 25);
     [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     backBtn.adjustsImageWhenHighlighted = NO;
     [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+    [self.navBarView addSubview:backBtn];
     
     [self.view addSubview:self.navBarView];
 }

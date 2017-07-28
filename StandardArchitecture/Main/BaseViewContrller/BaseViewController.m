@@ -24,13 +24,26 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-
+    
     [super viewWillAppear:animated];
+    
+    [self.navigationItem setHidesBackButton:YES];
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
     
     // 去掉下划线
     self.navigationController.navigationBar.shadowImage = [UIImage new];
+    
+    NSArray *viewControllers = self.navigationController.viewControllers;
+    
+    if (viewControllers.count >1) {
+        
+        return;
+        
+    }else {
+        
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
 }
 
 - (void)viewDidLoad {
@@ -55,19 +68,14 @@
     
     if (viewControllers.count > 1){
         
-        [self.navigationItem setHidesBackButton:NO animated:NO];
-        
         UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         leftButton.frame = CGRectMake(0, 0, 12, 21);
         [leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         leftButton.adjustsImageWhenHighlighted = NO;
         [leftButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
-       
         
-    }else{
         
-        [self.navigationItem setHidesBackButton:YES animated:NO];
     }
     
     [self.view addSubview:self.navBarView];
@@ -84,12 +92,13 @@
 
 -(void)setNavigationBarTitle:(NSString *)title {
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, NavigationBar_HEIGHT)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(42, 20, SCREEN_WIDTH - 84, NavigationBar_HEIGHT )];
     titleLabel.text = title;
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = Theme_Font_18;
-    self.navigationItem.titleView = titleLabel;
-    
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.navBarView addSubview:titleLabel];
 }
 
 @end
+
